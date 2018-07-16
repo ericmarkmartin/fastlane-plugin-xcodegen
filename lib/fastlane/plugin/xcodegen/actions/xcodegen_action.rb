@@ -10,7 +10,6 @@ module Fastlane
         Actions.sh("which xcodegen", log: false, error_callback: proc do |error_output|
           UI.message("Installing XcodeGen")
 
-          Actions::BrewAction.run(command: "tap yonaskolb/XcodeGen https://github.com/yonaskolb/XcodeGen.git")
           Actions::BrewAction.run(command: "install XcodeGen")
         end)
 
